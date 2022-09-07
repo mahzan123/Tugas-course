@@ -1,0 +1,302 @@
+*,
+html,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.chat {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 9;
+  font-size: 2.8em;
+  color: #25d366;
+  cursor: pointer;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 60%;
+ /* height: 60px;*/
+  margin: auto;
+}
+
+.nav-list {
+  display: flex;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+  /*background-color: tomato;*/
+  border-radius: 10px;
+  margin-top: 5px;
+  position: relative;
+  z-index: 13;
+  order: -1;
+}
+
+.nav-item {
+  width: 100%;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-link {
+  opacity: .8;
+  text-decoration: none;
+  transition: .2s;
+}
+
+.nav-link:hover {
+  opacity: 1;
+  transform: translateY(-10%);
+}
+
+.nav-icon {
+  display: none !important;
+  color: tomato;
+}
+
+.nav-text {
+  font-weight: bolder;
+  color: black;
+}
+
+.nav-text:hover {
+  color: green;
+}
+
+#active {
+  color: green;
+}
+
+.banner {
+  width: 80%;
+  height: 300px;
+  position: relative;
+  margin: auto;
+  background-color: whitesmoke;
+}
+.banner > img {
+  width: 100%;
+  height: 100%;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.title {
+  text-align: center;
+  position: relative;
+  padding-bottom: 8px;
+  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
+}
+
+.title::after {
+  content: "";
+  width: 80px;
+  height: 3px;
+  background-color: tomato;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.col {
+  flex-basis: 25%;
+  padding: 10px;
+  margin: 20px;
+  min-width: 200px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+}
+
+.col img {
+  width: 100%;
+}
+
+.col button {
+  background-color: tomato;
+  border-radius: 10px;
+  padding: 5px;
+  width: 50%;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+
+/*style CONTACT*/
+.box-contact {
+  margin: 50px;
+  display: grid;
+  grid-template-areas:
+        "box-1 box-3"
+        "box-2 box-3";
+  grid-template-columns: 1fr 2fr;
+  border-radius: 5px;
+  overflow: hidden;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.boxs {
+  display: flex;
+  grid-area: box-1;
+  align-items: center;
+  min-height: 50px;
+  padding: 10px;
+}
+
+.boxs .icon, h6 {
+  padding-left: 10px;
+  font-style: bold;
+}
+
+.box-1 {
+  grid-area: box-1;
+  border-right: 1px solid grey;
+}
+
+.box-2 {
+  grid-area: box-2;
+  border-right: 1px solid grey;
+}
+
+.box-3 {
+  grid-area: box-3;
+  font-size: 2em;
+  justify-content: space-evenly;
+}
+
+.box-3 > .facebook {
+  color: #3b5998;
+}
+.box-3 > .instagram {
+  color: #c32aa3;
+}
+.box-3 > .telegram {
+  color: #0088CC;
+}
+.box-3 > .linkedin {
+  color: #0e76a8;
+}
+.box-3 > .twitter {
+  color:  #00acee;
+}
+
+
+/*Footer*/
+footer {
+  height: 100px;
+  background-color: #222222;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer p {
+  color: white;
+  font-weight: bold;
+}
+
+
+/* lakukan responsive code */
+@media screen and (max-width: 487px) {
+
+  
+  .chat {
+    bottom: 90px;
+  }
+  
+  .banner {
+    width: 100%;
+    height: 200px;
+    margin: 5px auto;
+    bottom: 0;
+  }
+  
+  header {
+    width: 100%;
+    position: fixed;
+    bottom: 16px;
+    left: 0;
+    z-index: 9;
+    padding: 10px;
+  }
+
+  .nav-list {
+    background-color: white;
+    margin-bottom: -15px;
+  }
+  
+  .nav-item {
+    height: 60px;
+  }
+
+  .nav-icon {
+    display: block !important;
+    font-size: 25px;
+    transition: .2s;
+    color: black;
+  }
+
+  .nav-icon:hover {
+    transform: translateY(-10%);
+    color: green;
+  }
+
+  .nav-text {
+    display: none;
+  }
+
+  .col {
+    flex-basis: 100%;
+    text-align: center;
+  }
+  
+  
+  footer {
+    height: 125px;
+    align-items: start;
+    padding: 20px;
+  }
+
+}
+
+
+/*Contact Responsive mobile*/
+@media screen and (max-width: 487px) {
+  
+  .box-contact {
+    grid-template-areas: "box-1"
+                         "box-2"
+                         "box-3";
+    margin: 5px;
+  }
+  
+  .box-1, .box-2 {
+    border-bottom: 1px solid grey;
+    border-right: none;
+  }
+  
+  .box-3 {
+    margin-top: 50px;
+  }
+  
+}
