@@ -17,13 +17,27 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
       />
     
-    <title>CATEGORY MJ Shop</title>
+    <title>MJ Shop PRODUCT</title>
   </head>
   <body>
     
     <div class="chat fa fa-brands fa-square-whatsapp" onclick="chat()"></div>
+    
     <header>
-      <ul class="nav-list animate__animated animate__backInDown">
+      <div class="my-brand">
+        <img src="assets/images/my-brand.jpg" alt="my-brand.jpg" onclick="img()">
+        <h2>MJ Shop</h2>
+      </div>
+      <div class="search-bar">
+        <div class="search">
+          <input class="input" type="search" placeholder="search...">
+          <button class="btn"><i class="btn-icon fa-solid fa-magnifying-glass"></i></button>
+        </div>
+      </div>
+    </header>
+    
+    <nav>
+      <ul class="nav-list">
         <li class="nav-item">
           <a href="index.html" class="nav-link">
             <span class="nav-icon fa fa-home"></span>
@@ -31,15 +45,15 @@
           </a>
         </li>
         <li class="nav-item">
-          <a href="#" class="nav-link">
-            <span id="active" class="nav-icon fa fa-cart-plus"></span>
+          <a href="product.html" class="nav-link">
+            <span id="active" class="nav-icon fa fa-list"></span>
             <span id="active" class="nav-text">PRODUCT</span>
           </a>
         </li>
         <li class="nav-item">
-          <a href="category.html" class="nav-link">
-            <span class="nav-icon fa fa-list"></span>
-            <span class="nav-text">CATEGORY</span>
+          <a href="checkout.html" class="nav-link">
+            <span class="nav-icon fa fa-cart-plus"></span>
+            <span class="nav-text">CHECKOUT</span>
           </a>
         </li>
         <li class="nav-item">
@@ -49,22 +63,97 @@
           </a>
         </li>
       </ul>
-    </header>
+      
+      <div class="menu-toggle">
+        <input type="checkbox" />
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      
+    </nav>
     
     <div class="banner">
+      <div class="sub-banner">
+        <h2>MJ Shop</h2>
+        <p>Fashion & Accessories</p>
+      </div>
       <img src="assets/images/banner.png" alt="banner.png">
     </div>
     
     <main>
       <div class="container">
+        <!--CATEGORY option-->
+        <div class="option">
+          <select class="category">
+            <option value="t-shirt">T-Shirt</option>
+            <option value="sepatu">Sepatu</option>
+            <option value="">Celana</option>
+            <option value="hoodie">Hoodie</option>
+            <option value="tas">Tas </option>
+            <option value="aksesoris-hp">Aksesoris Handphone</option>
+            <option value="sandal">Sandal</option>
+          </select>
+        </div>
+        
         <h2 class="title">Product List</h2>
+        <div class="row">
+          <div class="col">
+            <img src="assets/images/product-1.jpg" />
+            <h4>Baju Casual</h4>
+            <button class="tombol" onclick="beli()">BELI</button>
+          </div>
+          <div class="col">
+            <img src="assets/images/product-2.jpg" />
+            <h4>Sepatu Casual</h4>
+            <button class="tombol" onclick="beli()">BELI</button>
+          </div>
+          <div class="col">
+            <img src="assets/images/product-3.jpg" />
+            <h4>Celana</h4>
+            <button class="tombol" onclick="beli()">BELI</button>
+          </div>
+          <div class="col">
+            <img src="assets/images/hoodie.jpg" />
+            <h4>Hoodie</h4>
+            <button class="tombol" onclick="beli()">BELI</button>
+          </div>
+          <div class="col">
+            <img src="assets/images/Tas.jpg" />
+            <h4>Tas</h4>
+            <button class="tombol" onclick="beli()">BELI</button>
+          </div>
+          <div class="col">
+            <img src="assets/images/hp.jpg" />
+            <h4>Case</h4>
+            <button class="tombol" onclick="beli()">BELI</button>
+          </div>
+          <div class="col">
+            <img src="assets/images/tshirt-2.jpg" />
+            <h4>T-shirt 2</h4>
+            <button class="tombol" onclick="beli()">BELI</button>
+          </div>
+          <div class="col">
+            <img src="assets/images/hp-2.jpg" />
+            <h4>Case-2</h4>
+            <button class="tombol" onclick="beli()">BELI</button>
+          </div>
+          <div class="col">
+            <img src="assets/images/tshirt-1.jpg" />
+            <h4>T-shirt</h4>
+            <button class="tombol" onclick="beli()">BELI</button>
+          </div>
+        </div>
       </div>
     </main>
+     
     
     <footer>
       <p>Copyright &copy; <span id="year"></span>. MJ Shop.</p>
     </footer>
     
+    <!--Link script-->
     <script src="assets/source.js"></script>
+    
   </body>
 </html>
